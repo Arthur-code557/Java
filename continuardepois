@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        quest01();
+    }
+    public static void quest01() {
+        Scanner input = new Scanner(System.in);
+        int choose;
+        double math;
+        String name, perg, bio;
+        System.out.println("Qual é o sei nome? ");
+        name = input.next();
+        System.out.println("Olá "+ name + ". Seja muito bem-vindo ao Java, uma das linguagens mais divertidas de todas kkkkkk.");
+        System.out.println("Gostaria de jogar um jogo(Sim ou Não)? ");
+        perg = input.next();
+        if (perg == "Sim") {
+            System.out.println("Beleza, escolha uma das opções pra começar: ");
+            System.out.println("1 - Matemática;");
+            System.out.println("2 - Biologia;");
+            System.out.println("3 - Física;");
+            System.out.println("4 - Educação Física;");
+            choose = input.nextInt();
+            switch choose: {
+                case 1: {
+                    System.out.println("Vamos ver se cê é bom na Matemática.");
+                    System.out.println("Quanto é (10 + 10) / 10? ");
+                    math = input.nextDouble();
+                    if (math == 10) {
+                        System.out.println("Parabéns, cê mandou muito bem! :)");
+                    } else {
+                        System.out.println("Precisa praticar mais kkkkk.");
+                    }
+                }
+                case 2: {
+                    System.out.println("Vamos ver se cê é bom na Biologia.");
+                    System.out.println("Nossa pele possui três camadas, qual é a mais externa? ");
+                    bio = input.next();
+                    if (bio == "Epitelial") {
+                        System.out.println("Parabéns, cê é o verdadeiro biologo.");
+                    } else {
+                        System.out.println("Tem que praticar mais kkkkk.");
+                    }
+                }
+                case 3: {
+                    System.out.println("Vamos ver se cê é bom na Física.");
+                    System.out.println("Quem foi que criou a Leis de Newton? ");
+                }
+            }
+        }
+    }
+}
