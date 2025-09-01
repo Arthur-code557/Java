@@ -1,0 +1,138 @@
+import java.util.Scanner;
+
+public class tarefa {
+    public static void main(String[] args) {
+        //ques05();
+        //ques06();
+        //ques07();
+        //ques08();
+        //ques09();
+        //ques10();
+        //ques11();
+        ques12();
+    }
+
+    public static void ques05() {
+        Scanner input = new Scanner(System.in);
+        double r, A, pi = 3.14;
+        System.out.println("Digite o raio do circulo: ");
+        r = input.nextDouble();
+        A = pi * r;
+        System.out.println("A área do circulo é: " + A);
+    }
+
+    public static void ques06() {
+        Scanner input = new Scanner(System.in);
+        double num, quad, ra;
+        System.out.println("Digite um número: ");
+        num = input.nextDouble();
+        if (num > 0) {
+            quad = num * num;
+            System.out.println("O quadrado desse número foi: " + quad);
+            ra = quad / num;
+            System.out.println("E a raiz desse número foi: " + ra);
+        } else {
+            System.out.println("Esse número não é positivo.");
+        }
+    }
+
+    public static void ques07() {
+        Scanner input = new Scanner(System.in);
+        double Ghrs, salarioBruto, inss, ir, sindicato, salarioLiquido;
+        int hrsT;
+        System.out.println("Quantas horas você trabalha? ");
+        hrsT = input.nextInt();
+        System.out.println("Ganha quanto por hora? ");
+        Ghrs = input.nextDouble();
+        salarioBruto = Ghrs * hrsT;
+        ir = salarioBruto * 0.11;
+        inss = salarioBruto * 0.08;
+        sindicato = salarioBruto * 0.05;
+        salarioLiquido = salarioBruto - ir - inss - sindicato;
+        System.out.println("O seu salário Bruto é de: " + salarioBruto);
+        System.out.println("O seu Imposto de Renda é de: " + ir);
+        System.out.println("O seu INSS é de: " + inss);
+        System.out.println("O seu Sindicato é de: " + sindicato);
+        System.out.println("O seu valor líquido é de: " + salarioLiquido);
+    }
+
+    public static void ques08() {
+        Scanner input = new Scanner(System.in);
+        int valor, nota50, nota10, nota5, nota1;
+        System.out.println("Digite a quantia que gostaria de sacar: ");
+        valor = input.nextInt();
+        nota50 = valor / 50;
+        valor %= 50;
+        nota10 = valor / 10;
+        valor %= 10;
+        nota5 = valor / 5;
+        valor %= 5;
+        nota1 = valor;
+        System.out.println("Nota50 = " + nota50);
+        System.out.println("Nota10 = " + nota10);
+        System.out.println("Nota5 = " + nota5);
+        System.out.println("Nota2 = " + nota1);
+    }
+
+    public static void ques09() {
+        Scanner input = new Scanner(System.in);
+        double salario, prest, limit, calc;
+        System.out.println("Digite o seu salário: ");
+        salario = input.nextDouble();
+        System.out.println("Digite a sua prestação de emprestimo: ");
+        prest = input.nextDouble();
+        limit = salario * 0.20;
+        System.out.println("Valor do limite: " + limit);
+        if (prest > limit) {
+            System.out.println("Empréstimo não concedido.");
+        } else {
+            System.out.println("Empréstimo concedido.");
+        }
+    }
+
+    public static void ques10() {
+        Scanner input = new Scanner(System.in);
+        double a, b, c, delta, x1, x2;
+        System.out.println("Digite o primeiro valor: ");
+        a = input.nextDouble();
+        System.out.println("Digite o segundo valor: ");
+        b = input.nextDouble();
+        System.out.println("Digite o terceiro digito: ");
+        c = input.nextDouble();
+        delta = b * b - 4 * a * c;
+        x1 = (-b + (delta * delta) / delta) / 2;
+        x2 = (-b - (delta * delta) / delta) / 2;
+        System.out.println("O delta foi: " + delta);
+        System.out.println("O resultado positivo foi: " + x1);
+        System.out.println("O resultado negativo foi: " + x2);
+    }
+
+    public static void ques11() {
+        Scanner input = new Scanner(System.in);
+        double not1, not2, media, fina, prova;
+        System.out.println("Digite sua primeira nota: ");
+        not1 = input.nextDouble();
+        System.out.println("Digite sua segunda nota: ");
+        not2 = input.nextDouble();
+        media = (not1 + not2) / 2;
+        if (media >= 7) {
+            System.out.println("Parabéns, você foi aprovado!");
+        } else {
+            System.out.println("Reprovado por média.");
+        }                                                             //CONTINUAR COM A TAREFA DO MAURÍCIO DE JAVA
+        if (media >= 4 && media < 7) {
+            System.out.println("Você está na prova final.");
+            System.out.println("Qual foi a sua nota final? ");
+            fina = input.nextDouble();
+            prova = (fina + media) / 2;
+            if (prova >= 7) {
+                System.out.println("Parabéns, você foi aprovado na final!");
+            } else {
+                System.out.println("Você foi reprovado na final.");
+            }
+        }
+    }
+    public static void ques12() {
+        
+    }
+}
